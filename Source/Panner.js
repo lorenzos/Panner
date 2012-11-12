@@ -21,7 +21,7 @@ var Panner = new Class({
 	
 	options: {
 		limit: true, // Limits content movements at its normal scroll bounds
-		center: false, // Move to center initially
+		center: false // Move to center initially
 	},
 	
 	initialize: function(content, options) {
