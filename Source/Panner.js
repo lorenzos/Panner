@@ -35,12 +35,17 @@ var Panner = new Class({
 		if (!(['relative', 'absolute'].contains(this.content.getStyle('position')))) this.content.setStyle('position', 'relative');
 		this.container.setStyle('overflow', 'hidden');
 		
+		// Force container position for IE6-7 (this solves an overflow bug)
+		if (Browser.ie6 || Browser.ie7) {
+			if (!(['relative', 'absolute'].contains(this.container.getStyle('position')))) this.container.setStyle('position', 'relative');
+		}
+		
 		// Attach
 		this.attach();
 		
 		// Manage window resizing
 		window.addEvent('resize', function() { if (this.attached) this.refresh(); }.bind(this));
-	
+		
 		// Center?
 		if (this.options.center) this.center();
 		
