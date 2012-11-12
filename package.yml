@@ -4,6 +4,6 @@ category: Interface
 tags: [pan, panning, image, parallax, scrolling]
 demo: http://www.lorenzostanco.com/demos/Panner/Demo.html
 docs: https://github.com/lorenzos/Panner#docs
-current: 0.1
+current: 0.2
 sources:
   - "Source/Panner.js"
