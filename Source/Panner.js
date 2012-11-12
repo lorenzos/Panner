@@ -1,6 +1,6 @@
 /*
 ---
-description: Content panning based mouse movement, a cool way to replace scrolling for large images or full pages.
+description: Content panning based on mouse movement, a cool way to replace scrolling for large images or full pages.
 
 license: MIT-style
 

@@ -1,7 +1,7 @@
 Panner
 ======
 
-Content panning based mouse movement, a cool way to replace scrolling for large images or full pages.  
+Content panning based on mouse movement, a cool way to replace scrolling for large images or full pages.  
 Requires Mootools Core 1.4.1 or later.
 
 ![Screenshot](https://github.com/lorenzos/Panner/raw/master/Graphics/logo.png)
