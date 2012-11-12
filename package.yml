@@ -1,7 +1,7 @@
 name: Panner
 author: lorenzo.stanco
 category: Interface
-tags: [pan, panning, image, parallax, scrolling]
+tags: [pan, panning, image, scrolling, scroll]
 demo: http://www.lorenzostanco.com/demos/Panner/Demo.html
 docs: https://github.com/lorenzos/Panner#docs
 current: 0.2
