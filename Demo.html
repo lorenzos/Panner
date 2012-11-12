@@ -30,6 +30,13 @@
 		body {
 			font-family: sans-serif;
 			font-size: 13px;
+			text-align: center;
+		}
+		
+		#wrapper {
+			margin: 0 auto;
+			text-align: left;
+			width: 624px;
 		}
 		
 		div {
@@ -39,7 +46,7 @@
 		div.example {
 			background-color: #999999;
 			border: 1px solid #666666;
-			margin: 10px 40px;
+			margin: 10px;
 			padding: 1px;
 		}
 		
@@ -89,7 +96,8 @@
 			padding: 10px 15px;
 			background-color: #eeffef;
 			border: 1px solid #cceedf;
-			margin: 10px 40px;
+			margin: 10px;
+			width: 572px;
 		}
 		
 		pre.javascript {
@@ -101,13 +109,14 @@
 	
 </head>
 <body>
+<div id="wrapper">
 	
 	<div><h1>Panner demo page</h1></div>
 	
 	<p>
 		<b>Content panning</b> based mouse movement, a cool way to replace 
-		<b>scrolling</b> for large images or full pages.<br>
-		Requires Mootools Core 1.4.1 or later.<br>
+		<b>scrolling</b> for large images or full pages.
+		Requires Mootools Core 1.4.1 or later.
 		Download and HowTo on <a href="http://mootools.net/forge/p/panner">Mootools Forge</a>, sources and issues on 
 		<a href="https://github.com/lorenzos/Panner">GitHub</a>, full documentation 
 		<a href="https://github.com/lorenzos/Panner#docs">here</a>.
@@ -143,16 +152,15 @@
 	</div>
 	
 	<pre class="html">&lt;div style=&quot;width: 600px; height: 200px;&quot;&gt;
-	&lt;img id=&quot;photo&quot; width=&quot;1200&quot; height=&quot;600&quot; src=&quot;Graphics/Examples/arduino.jpg&quot;&gt;
+	&lt;img id=&quot;photo&quot; width=&quot;1200&quot; height=&quot;600&quot; src=&quot;arduino.jpg&quot;&gt;
 &lt;/div&gt;</pre>
 	<pre class="javascript">$('photo').panner({ center: true });</pre>
 
-	<div>
-		<p>
-			Sample text from <a href="http://en.wikipedia.org/wiki/Arduino" target="_blank">Wikipedia</a>.
-			All photos are released into the public domain.
-		</p>
-	</div>
+	<p>
+		Sample text from <a href="http://en.wikipedia.org/wiki/Arduino" target="_blank">Wikipedia</a>.
+		All photos are released into the public domain.
+	</p>
 	
+</div>
 </body>
 </html>
