@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Panner demo page</title>
+	
+	<!-- Include Mootools and Panner -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.1/mootools-yui-compressed.js"></script>
+	<script type="text/javascript" src="Source/Panner.js"></script>
+	
+	<script type="text/javascript">
+	
+		window.addEvent('domready', function() {
+			
+			// First basic example
+			$('content').panner();
+			
+			// Large image example
+			$('photo').panner({ center: true });
+			
+		});
+		
+	</script>
+	
+	<style type="text/css">
+		
+		/* These rules are not necessary to make Panner work.
+		 * They are here only to style this demo page. */
+		
+		body {
+			font-family: sans-serif;
+			font-size: 13px;
+		}
+		
+		div {
+			margin: 20px 10px;
+		}
+		
+		div.example {
+			background-color: #999999;
+			border: 1px solid #666666;
+			margin: 10px 40px;
+			padding: 1px;
+		}
+		
+		div.example>div {
+			margin: 0;
+			padding: 0;
+			background-color: #333333;
+		}
+		
+		div.example>div>.bit {
+			float: left;
+			font-size: 14px;
+			height: 160px;
+			width: 160px;
+			line-height: 23px;
+			margin: 10px 0 0 10px;
+			color: #dddddd;
+			text-shadow: 1px 1px 0 #000000;
+		}
+		
+		div.example>div>.bit>img {
+			box-shadow: 4px 4px 0 #222222;
+		}
+		
+		p {
+			color: #666666;
+			margin: 20px 10px;
+			clear: both;
+		}
+		
+		p b {
+			color: #333333;
+		}
+		
+		a {
+			font-weight: bold;
+			color: #3344FF;
+		}
+		
+		a:hover {
+			font-weight: bold;
+			color: #6677FF;
+		}
+		
+		pre {
+			font-size: 12px;
+			padding: 10px 15px;
+			background-color: #eeffef;
+			border: 1px solid #cceedf;
+			margin: 10px 40px;
+		}
+		
+		pre.javascript {
+			background-color: #eeefff;
+			border: 1px solid #ccdfee;
+		}
+		
+	</style>
+	
+</head>
+<body>
+	
+	<div><h1>Panner demo page</h1></div>
+	
+	<p>
+		<b>Content panning</b> based mouse movement, a cool way to replace 
+		<b>scrolling</b> for large images or full pages.<br>
+		Requires Mootools Core 1.4.1 or later.<br>
+		Download and HowTo on <a href="http://mootools.net/forge/p/panner">Mootools Forge</a>, sources and issues on 
+		<a href="https://github.com/lorenzos/Panner">GitHub</a>, full documentation 
+		<a href="https://github.com/lorenzos/Panner#docs">here</a>.
+	</p>
+
+	<p><b>Basic example</b>, large content panning <i>(note that content is bigger than its container!)</i>:</p>
+	
+	<div class="example" style="width: 600px; height: 200px;">
+		<div id="content" style="width: 1200px; height: 520px;">
+			<div class="bit" style="width: 330px; font-family: serif; line-height: 31px; font-size: 22px;">Arduino is an open-source single-board microcontroller designed to make the process of using electronics in multidisciplinary projects more accessible. </div>
+			<div class="bit"><img src="Graphics/Examples/arduino_small.jpg"></div>
+			<div style="width: 320px; padding-left: 10px;" class="bit">Arduino hardware is programmed using a Wiring-based language (syntax and libraries), similar to C++ with some slight simplifications and modifications, and a Processing-based integrated development environment.</div>
+			<div class="bit" style="width: 330px;"><img src="Graphics/Examples/arduino_connected.jpg"></div>
+			<div class="bit" style="height: 330px; width: 330px;"><img src="Graphics/Examples/arduino_macro.jpg"></div>
+			<div style="width: 310px; padding-left: 10px; padding-right: 10px;" class="bit"> The hardware consists of a simple open hardware design for the Arduino board with an Atmel AVR processor and on-board input/output support. The software consists of a standard programming language compiler and the boot loader that runs on the board.</div>
+			<div class="bit" style="width: 500px; font-family: serif; font-size: 32px; line-height: 39px;">The Arduino project received an honorary mention in the Digital Communities category at the 2006 Prix Ars Electronica.</div>
+			<div style="width: 480px; padding-left: 10px; padding-right: 10px;" class="bit">The Arduino hardware reference designs are distributed under a Creative Commons Attribution Share-Alike 2.5 license and are available on the Arduino Web site. Layout and production files for some versions of the Arduino hardware are also available. The source code for the IDE and the on-board library are available and released under the GPLv2 license.</div>
+			<div class="bit" style="width: 330px;">Arduino and Arduino-compatible boards make use of shields, which are printed circuit boards that sit atop an Arduino, and plug into the normally supplied pin-headers. These are expansions to the base Arduino. There are many functions of shields, from motor controls, to breadboarding (prototyping).</div>
+		</div>
+	</div>
+
+	<pre class="html">&lt;div style=&quot;width: 600px; height: 200px;&quot;&gt;
+	&lt;div id=&quot;content&quot; style=&quot;width: 1200px; height: 600px;&quot;&gt;
+		[...]
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+	<pre class="javascript">$('content').panner();</pre>
+
+	<p><b>Large image</b> example (the <i>center</i> option is used to place the image in the center initially):</p>
+
+	<div class="example" style="width: 600px; height: 200px;">
+		<img id="photo" width="1280" height="960" src="Graphics/Examples/arduino.jpg">
+	</div>
+	
+	<pre class="html">&lt;div style=&quot;width: 600px; height: 200px;&quot;&gt;
+	&lt;img id=&quot;photo&quot; width=&quot;1200&quot; height=&quot;600&quot; src=&quot;Graphics/Examples/arduino.jpg&quot;&gt;
+&lt;/div&gt;</pre>
+	<pre class="javascript">$('photo').panner({ center: true });</pre>
+
+	<div>
+		<p>
+			Sample text from <a href="http://en.wikipedia.org/wiki/Arduino" target="_blank">Wikipedia</a>.
+			All photos are released into the public domain.
+		</p>
+	</div>
+	
+</body>
+</html>
