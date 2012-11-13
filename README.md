@@ -44,7 +44,7 @@ Docs
 
 **Options:**
 
-- **limit**: If `TRUE` (default) limits content panning at its normal scroll bounds.
+- **limit**: If `TRUE` (default) limits content panning at its normal scroll bounds. Can be also an object with two `x` and `y` boolean values (for example `{ x: true, y: false }` limits content padding only for x-axis).
 - **center**: If `TRUE` moves the content to the center initially.
 
 **Methods:**

@@ -119,14 +119,12 @@ var Panner = new Class({
 			var position = { x: this.containerSize.x / 2 - mouse.x * this.ratio.x, y: this.containerSize.y / 2 - mouse.y * this.ratio.y }; // New position for content
 			
 			// Limit coordinates
-			if (this.options.limit) position = {
-				x: position.x.limit(this.containerSize.x - this.contentSize.x, 0), 
-				y: position.y.limit(this.containerSize.y - this.contentSize.y, 0)
-			};
+			if (this.options.limit === true || this.options.limit.x) position.x = position.x.limit(this.containerSize.x - this.contentSize.x, 0); 
+			if (this.options.limit === true || this.options.limit.y) position.y = position.y.limit(this.containerSize.y - this.contentSize.y, 0);
 			
 			// Force when container is bigger than content
-			if (this.options.limit && this.containerSize.x > this.contentSize.x) position.x = this.options.center ? (this.containerSize.x - this.contentSize.x) / 2 : 0;
-			if (this.options.limit && this.containerSize.y > this.contentSize.y) position.y = this.options.center ? (this.containerSize.y - this.contentSize.y) / 2 : 0;
+			if ((this.options.limit === true || this.options.limit.x) && this.containerSize.x > this.contentSize.x) position.x = this.options.center ? (this.containerSize.x - this.contentSize.x) / 2 : 0;
+			if ((this.options.limit === true || this.options.limit.y) && this.containerSize.y > this.contentSize.y) position.y = this.options.center ? (this.containerSize.y - this.contentSize.y) / 2 : 0;
 			
 			// Apply position
 			this.content.setStyles({ 'left': position.x, 'top': position.y });
